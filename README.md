@@ -1,0 +1,5 @@
+# Rating
+
+> NextJS
+
+> TypeScript
