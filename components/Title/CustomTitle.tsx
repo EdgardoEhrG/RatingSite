@@ -1,12 +1,12 @@
 import React from "react";
 
-import { TitleProps } from "./title.props";
+import { CustomTitleProps } from "./CustomTitle.props";
 
 import { Tags } from "../../constants/tags";
 
-import styles from "./Title.module.scss";
+import styles from "./CustomTitle.module.scss";
 
-const Title = ({ tag, children }: TitleProps): JSX.Element => {
+const CustomTitle = ({ tag, children }: CustomTitleProps): JSX.Element => {
   switch (tag) {
     case Tags.H1:
       return <h1 className={styles.h1}>{children}</h1>;
@@ -19,4 +19,4 @@ const Title = ({ tag, children }: TitleProps): JSX.Element => {
   }
 };
 
-export default Title;
+export default CustomTitle;

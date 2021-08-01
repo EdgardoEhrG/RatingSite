@@ -1,14 +1,17 @@
 import React from "react";
 
-import { ButtonProps } from "./Button.props";
+import { CustomButtonProps } from "./CustomButton.props";
 
 import { Appearances } from "../../constants/appearances";
 
 import classNames from "classnames";
 
-import styles from "./Button.module.scss";
+import styles from "./CustomButton.module.scss";
 
-const Button = ({ appearance, children }: ButtonProps): JSX.Element => {
+const CustomButton = ({
+  appearance,
+  children,
+}: CustomButtonProps): JSX.Element => {
   return (
     <button
       className={classNames(styles.button, {
@@ -21,4 +24,4 @@ const Button = ({ appearance, children }: ButtonProps): JSX.Element => {
   );
 };
 
-export default Button;
+export default CustomButton;
