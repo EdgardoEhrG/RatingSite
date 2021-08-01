@@ -2,4 +2,8 @@
 
 > NextJS
 
+> ReactJS
+
 > TypeScript
+
+> Sass (SCSS)
