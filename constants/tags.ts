@@ -3,3 +3,9 @@ export enum Tags {
   H2 = "h2",
   H3 = "h3",
 }
+
+export enum Size {
+  SMALL = "s",
+  MEDIUM = "m",
+  LARGE = "l",
+}
