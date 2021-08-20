@@ -1,15 +1,9 @@
-import CustomButton from "../components/CustomButton/CustomButton";
-
-import { Appearances } from "../constants/appearances";
-import { IconPositions } from "../constants/icons";
+import Rating from "../components/Rating/Rating";
 
 export default function Home(): JSX.Element {
   return (
     <div>
-      <CustomButton appearance={Appearances.PRIMARY} arrow={IconPositions.DOWN}>
-        {" "}
-        TEXT{" "}
-      </CustomButton>
+      <Rating rating={3} isEditable={true} />
     </div>
   );
 }
