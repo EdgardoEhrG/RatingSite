@@ -1,9 +1,11 @@
-import Rating from "../components/Rating/Rating";
+import { withLayout } from "../layouts/Default/Layout";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   return (
-    <div>
-      <Rating rating={3} isEditable={true} />
-    </div>
+    <>
+      <div>CONTENT</div>
+    </>
   );
 }
+
+export default withLayout(Home);
