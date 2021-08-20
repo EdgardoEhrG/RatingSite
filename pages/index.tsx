@@ -1,11 +1,7 @@
 import { withLayout } from "../layouts/Default/Layout";
 
 function Home(): JSX.Element {
-  return (
-    <>
-      <div>CONTENT</div>
-    </>
-  );
+  return <></>;
 }
 
 export default withLayout(Home);
