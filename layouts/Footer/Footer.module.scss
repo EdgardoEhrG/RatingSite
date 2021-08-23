@@ -2,7 +2,7 @@
 
 .footer {
   display: grid;
-  grid-auto-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto;
   gap: 10px 40px;
   padding: 25px 30px;
   font-size: 16px;
