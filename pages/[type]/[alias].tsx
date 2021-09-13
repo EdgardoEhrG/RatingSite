@@ -5,11 +5,14 @@ import { LevelCategory, PageModel } from "../../interfaces/page";
 import { MenuItem } from "../../interfaces/menu";
 import { ProductModel } from "../../interfaces/product";
 
+import { firstLevelMenu } from "../../helpers/Menu";
+
 import { withLayout } from "../../layouts/Default/Layout";
+
+import TopPage from "../../containers/TopPage/TopPage";
 
 import axios from "axios";
 import { ParsedUrlQuery } from "querystring";
-import { firstLevelMenu } from "../../helpers/Menu";
 
 interface CourseProps extends Record<string, unknown> {
   menu: MenuItem[];
@@ -18,8 +21,10 @@ interface CourseProps extends Record<string, unknown> {
   products: ProductModel[];
 }
 
-const Course = ({ menu, page, products }: CourseProps) => {
-  return <div>{products}</div>;
+const Course = ({ firstCategory, page, products }: CourseProps) => {
+  return (
+    <TopPage firstCategory={firstCategory} page={page} products={products} />
+  );
 };
 
 export default withLayout(Course);
