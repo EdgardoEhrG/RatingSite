@@ -8,16 +8,13 @@ import { SortEnum } from "../../components/Sort/Sort.props";
 
 import CustomTitle from "../../components/CustomTitle/CustomTitle";
 import CustomTag from "../../components/CustomTag/CustomTag";
-// import Card from "../../components/Card/Card";
 import Advantages from "../../components/Advantages/Advantages";
 import Sort from "../../components/Sort/Sort";
+import Product from "../../components/Product/Product";
 
 import { sortReducer } from "../../components/Sort/sort.reducer";
 
 import styles from "./TopPage.module.scss";
-
-// import classNames from "classnames";
-// import CustomParagraph from "../../components/CustomParagraph/CustomParagraph";
 
 const TopPage = ({
   page,
@@ -46,9 +43,13 @@ const TopPage = ({
           </CustomTag>
         )}
         <Sort sort={sort} setSort={setSort} />
-        <span>SORTING</span>
       </div>
-      <div>PRODUCTS</div>
+      <div>
+        {sortedProducts &&
+          sortedProducts.map((product) => (
+            <Product key={product._id} product={product} />
+          ))}
+      </div>
       <div className={styles.hhTitle}>
         <CustomTitle
           tag={Tags.H2}
