@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+.button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.primary {
+  background-color: $primary;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  svg {
+    * {
+      fill: $white;
+    }
+  }
+}
+
+.ghost {
+  color: $black;
+  background: none;
+  border: 1px solid $light-grey;
+
+  &:hover {
+    color: $white;
+    background-color: $primary-hover;
+
+    svg {
+      * {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.white {
+  background: $white;
+  border: 1px solid $light-grey;
+
+  &:hover {
+    background-color: $primary-hover;
+
+    svg {
+      * {
+        fill: $white;
+      }
+    }
+  }
+}

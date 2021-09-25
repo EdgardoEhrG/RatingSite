@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 
 import { TopPageProps } from "./TopPage.props";
 
@@ -29,6 +29,10 @@ const TopPage = ({
     }
   );
 
+  useEffect(() => {
+    dispatchSort({ type: "reset", initialState: products });
+  }, [products]);
+
   const setSort = (sort: SortEnum) => {
     dispatchSort({ type: sort });
   };
@@ -47,7 +51,7 @@ const TopPage = ({
       <div>
         {sortedProducts &&
           sortedProducts.map((product) => (
-            <Product key={product._id} product={product} />
+            <Product key={product._id} layout product={product} />
           ))}
       </div>
       <div className={styles.hhTitle}>

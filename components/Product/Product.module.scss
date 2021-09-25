@@ -144,6 +144,10 @@
   @media screen and (max-width: 1320px) {
     grid-area: rateTitle;
   }
+
+  a {
+    color: $primary;
+  }
 }
 
 .separator,
@@ -285,17 +289,7 @@
   }
 }
 
-.opened {
-  max-height: auto;
-  padding: 30px;
-}
-
-.closed {
-  max-height: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 .reviews {
   margin-top: -30px;
+  overflow: hidden;
 }
