@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 
 import { MenuItem } from "../interfaces/menu";
+import { API } from "../helpers/api";
 
 import { withLayout } from "../layouts/Default/Layout";
 
@@ -19,10 +20,9 @@ export default withLayout(Home);
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const firstCategory = 0;
-  const { data: menu } = await axios.post<MenuItem[]>(
-    `${process.env.NEXT_PUBLIC_DOMAIN}/api/top-page/find`,
-    { firstCategory }
-  );
+  const { data: menu } = await axios.post<MenuItem[]>(API.topPage.find, {
+    firstCategory,
+  });
   return {
     props: {
       menu,

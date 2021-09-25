@@ -15,3 +15,18 @@
     color: $grey;
   }
 }
+
+.inputWrapper {
+  position: relative;
+
+  .error {
+    border: 1px solid $red;
+  }
+
+  .errorMsg {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: $red;
+  }
+}

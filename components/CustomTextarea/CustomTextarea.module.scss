@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 .textarea {
+  width: 100%;
   padding: 7px 15px;
   font-family: $noto-sans;
   font-size: 16px;
@@ -13,5 +14,20 @@
 
   &::placeholder {
     color: $grey;
+  }
+}
+
+.textareaWrapper {
+  position: relative;
+
+  .error {
+    border: 1px solid $red;
+  }
+
+  .errorMsg {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    color: $red;
   }
 }
