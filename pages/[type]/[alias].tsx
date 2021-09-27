@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 
 import { LevelCategory, PageModel } from "../../interfaces/page";
@@ -9,6 +10,8 @@ import { API } from "../../helpers/api";
 import { firstLevelMenu } from "../../helpers/Menu";
 
 import { withLayout } from "../../layouts/Default/Layout";
+
+import Error404 from "../404";
 
 import TopPage from "../../containers/TopPage/TopPage";
 
@@ -23,8 +26,18 @@ interface CourseProps extends Record<string, unknown> {
 }
 
 const Course = ({ firstCategory, page, products }: CourseProps) => {
+  if (!page || !products) {
+    return <Error404 />;
+  }
+
   return (
-    <TopPage firstCategory={firstCategory} page={page} products={products} />
+    <>
+      <Head>
+        <title>{page.metaTitle}</title>
+        <meta name="description" content={page.metaDescription} />
+      </Head>
+      <TopPage firstCategory={firstCategory} page={page} products={products} />
+    </>
   );
 };
 

@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    image: top-app-demo
+    container-name: top-app-demo
+    restarts: always
+    ports:
+      - 3000:3000
+    volumes:
+      - /data.env:/data/.env
